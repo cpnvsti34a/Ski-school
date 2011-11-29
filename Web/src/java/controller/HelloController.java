@@ -36,10 +36,10 @@ public class HelloController extends SimpleFormController {
     HttpServletResponse response, 
     Object command, 
     BindException errors) throws Exception {
-    Name name = (Name) command;
-    ModelAndView mv = new ModelAndView(getSuccessView());
-    mv.addObject("helloMessage", helloService.sayHello(name.getValue()));
-    return mv;
+        Name name = (Name) command;
+        ModelAndView mv = new ModelAndView(getSuccessView());
+        mv.addObject("helloMessage", helloService.sayHello(name.getValue()));
+        return mv;
     }
     // */
     
