@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20111129110255) do
   create_table "reservations", :force => true do |t|
     t.integer  "nbPeople"
     t.integer  "nbDays"
+    t.integer  "nbLionel"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
