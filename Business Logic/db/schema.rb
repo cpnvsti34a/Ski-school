@@ -11,12 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111129110255) do
+ActiveRecord::Schema.define(:version => 20111129112414) do
 
   create_table "reservations", :force => true do |t|
     t.integer  "nbPeople"
-    t.integer  "nbDays"
-    t.integer  "nbLionel"
+    t.date     "startDate"
+    t.date     "endDate"
+    t.string   "lastName1"
+    t.string   "firstName1"
+    t.string   "lastName2"
+    t.string   "firstName2"
+    t.string   "lastName3"
+    t.string   "firstName3"
+    t.string   "lastName4"
+    t.string   "firstName4"
+    t.integer  "level1"
+    t.integer  "level2"
+    t.integer  "level3"
+    t.integer  "level4"
+    t.string   "language"
+    t.string   "phone"
+    t.boolean  "payed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

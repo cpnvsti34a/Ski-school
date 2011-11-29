@@ -3,6 +3,23 @@
 <table>
   <tr>
     <th>Nbpeople</th>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th>Lastname1</th>
+    <th>Firstname1</th>
+    <th>Lastname2</th>
+    <th>Firstname2</th>
+    <th>Lastname3</th>
+    <th>Firstname3</th>
+    <th>Lastname4</th>
+    <th>Firstname4</th>
+    <th>Level1</th>
+    <th>Level2</th>
+    <th>Level3</th>
+    <th>Level4</th>
+    <th>Language</th>
+    <th>Phone</th>
+    <th>Payed</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +28,23 @@
 <% @reservations.each do |reservation| %>
   <tr>
     <td><%= reservation.nbPeople %></td>
+    <td><%= reservation.startDate %></td>
+    <td><%= reservation.endDate %></td>
+    <td><%= reservation.lastName1 %></td>
+    <td><%= reservation.firstName1 %></td>
+    <td><%= reservation.lastName2 %></td>
+    <td><%= reservation.firstName2 %></td>
+    <td><%= reservation.lastName3 %></td>
+    <td><%= reservation.firstName3 %></td>
+    <td><%= reservation.lastName4 %></td>
+    <td><%= reservation.firstName4 %></td>
+    <td><%= reservation.level1 %></td>
+    <td><%= reservation.level2 %></td>
+    <td><%= reservation.level3 %></td>
+    <td><%= reservation.level4 %></td>
+    <td><%= reservation.language %></td>
+    <td><%= reservation.phone %></td>
+    <td><%= reservation.payed %></td>
     <td><%= link_to 'Show', reservation %></td>
     <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
     <td><%= link_to 'Destroy', reservation, confirm: 'Are you sure?', method: :delete %></td>
