@@ -1,4 +1,6 @@
 BusinessLogic::Application.routes.draw do
+  resources :reservations
+
   resources :users
 
   # The priority is based upon order of creation:
