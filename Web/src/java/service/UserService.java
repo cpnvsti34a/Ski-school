@@ -13,10 +13,9 @@ import java.net.URL;
 
 /**
  *
- * @author Lionel.MARMIER
+ * @author kevin.borgeaud
  */
 public class UserService {
-    
     private String phrase;
     
     public UserService(){

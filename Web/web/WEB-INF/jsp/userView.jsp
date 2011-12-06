@@ -1,7 +1,7 @@
 <%-- 
-    Document   : nameView
-    Created on : 29 nov. 2011, 14:31:16
-    Author     : Lionel.MARMIER
+    Document   : userView
+    Created on : 6 déc. 2011, 10:17:48
+    Author     : kevin.borgeaud
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

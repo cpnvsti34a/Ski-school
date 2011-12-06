@@ -6,20 +6,19 @@ package controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
+import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.portlet.mvc.AbstractController;
 import service.UserService;
 
 /**
  *
- * @author Lionel.MARMIER
+ * @author kevin.borgeaud
  */
 public class UserController extends AbstractController {
-    
     private UserService userService;
     private String users;
     
-      public UserController() {
+    public UserController() {
           
     }
     
@@ -28,7 +27,6 @@ public class UserController extends AbstractController {
         this.userService = userService;
     }
 
-    @Override
     protected ModelAndView handleRequestInternal(
             HttpServletRequest request,
             HttpServletResponse response) throws Exception {
@@ -36,6 +34,4 @@ public class UserController extends AbstractController {
                 mv.addObject("pass", userService.retour("http://localhost:3000/users/1.xml"));
                 return mv;
     }
-    
-    
 }

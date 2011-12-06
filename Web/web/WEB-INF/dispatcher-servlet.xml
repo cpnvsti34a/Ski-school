@@ -34,10 +34,7 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
-        
-        <bean class="controller.UserController" p:userService-ref="userService" />
-        <bean class="controller.HelloController" p:helloService-ref="helloService" />
-        
-        
+          
+           <bean class="controller.UserController" p:userService-ref="userService" />
     
 </beans>
