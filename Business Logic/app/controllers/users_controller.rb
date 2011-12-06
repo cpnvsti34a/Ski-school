@@ -92,9 +92,10 @@ class UsersController < ApplicationController
   
   #Test methode
   def test
-	@test = params[:id]
+	@test = {"id"=>params[:id], "name"=>params[:name]}
+	@user = User.new(@test)
 	respond_to do |format|
-		format.json {render json: @test}
+		format.json {render json: @user}
 	end
   end
 end

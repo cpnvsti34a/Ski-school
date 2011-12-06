@@ -13,6 +13,6 @@
         <title>From</title>
     </head>
     <body>
-        ${pass}
+        ${pass} <br/>
     </body>
 </html>
