@@ -44,7 +44,7 @@ public class UserService {
         
         try{   
             //Construct data
-            String donnee = URLEncoder.encode("id", "UTF-8") + "=" + URLEncoder.encode(data, "UTF-8"); 
+            //String donnee = URLEncoder.encode("id", "UTF-8") + "=" + URLEncoder.encode(data, "UTF-8"); 
             
             //Send data
             URL url = new URL("http://localhost:3000/users/test.json");
@@ -53,7 +53,7 @@ public class UserService {
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
             wr.write(data);
             wr.flush();
-            System.out.print(donnee);
+            //System.out.print(donnee);
             //Get the response
             BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line = "";
