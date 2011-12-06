@@ -47,7 +47,7 @@ public class UserService {
             String donnee = URLEncoder.encode("id", "UTF-8") + "=" + URLEncoder.encode(data, "UTF-8"); 
             
             //Send data
-            URL url = new URL("http://localhost:3000/users/test.xml");
+            URL url = new URL("http://localhost:3000/users/test.json");
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
@@ -64,7 +64,7 @@ public class UserService {
             rd.close();
             
         }catch(Exception e){
-            
+            System.out.print(e);
         }
         return ln;
     }
