@@ -1,41 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  nbPeople: 1
-  startDate: 2011-11-29
-  endDate: 2011-11-29
-  lastName1: MyString
-  firstName1: MyString
-  lastName2: MyString
-  firstName2: MyString
-  lastName3: MyString
-  firstName3: MyString
-  lastName4: MyString
-  firstName4: MyString
-  level1: 1
-  level2: 1
-  level3: 1
-  level4: 1
-  language: MyString
-  phone: MyString
+  idMoniteur: 1
+  IDUser: 1
+  startDate: 2011-12-12
+  endDate: 2011-12-12
+  Language: MyString
   payed: false
 
 two:
-  nbPeople: 1
-  startDate: 2011-11-29
-  endDate: 2011-11-29
-  lastName1: MyString
-  firstName1: MyString
-  lastName2: MyString
-  firstName2: MyString
-  lastName3: MyString
-  firstName3: MyString
-  lastName4: MyString
-  firstName4: MyString
-  level1: 1
-  level2: 1
-  level3: 1
-  level4: 1
-  language: MyString
-  phone: MyString
+  idMoniteur: 1
+  IDUser: 1
+  startDate: 2011-12-12
+  endDate: 2011-12-12
+  Language: MyString
   payed: false

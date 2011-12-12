@@ -1,0 +1,25 @@
+<h1>Listing moniteurs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Lastname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @moniteurs.each do |moniteur| %>
+  <tr>
+    <td><%= moniteur.name %></td>
+    <td><%= moniteur.lastname %></td>
+    <td><%= link_to 'Show', moniteur %></td>
+    <td><%= link_to 'Edit', edit_moniteur_path(moniteur) %></td>
+    <td><%= link_to 'Destroy', moniteur, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Moniteur', new_moniteur_path %>
