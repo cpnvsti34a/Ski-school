@@ -13,6 +13,7 @@
         <title>From</title>
     </head>
     <body>
+        Voici l'utilisateur que vous venez de créer : <br /><br />
         ${pass} <br/>
     </body>
 </html>

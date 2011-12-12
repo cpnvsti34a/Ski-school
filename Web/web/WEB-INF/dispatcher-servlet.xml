@@ -36,6 +36,7 @@
           p:viewName="index" />
         
         <bean class="controller.UserController" p:userService-ref="userService" />
+        <bean class="controller.CreateUserController" p:userService-ref="userService" />
         <bean class="controller.HelloController" p:helloService-ref="helloService" />
         
         

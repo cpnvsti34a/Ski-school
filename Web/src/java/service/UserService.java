@@ -12,7 +12,6 @@ import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.net.URLEncoder;
 
 /**
  *
@@ -53,7 +52,7 @@ public class UserService {
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
             wr.write(data);
             wr.flush();
-            //System.out.print(donnee);
+            System.out.print(data);
             //Get the response
             BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line = "";
@@ -66,6 +65,6 @@ public class UserService {
         }catch(Exception e){
             System.out.print(e);
         }
-        return ln;
+        return ln + "Utilisateurs Créer";
     }
 }
