@@ -7,6 +7,7 @@ package controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 import service.ReservationService;
 
 
@@ -14,12 +15,12 @@ import service.ReservationService;
  *
  * @author gregory.torche
  */
-public class ReservationController extends AbstractMethodError{
+public class ReservationController extends MultiActionController{
     
     private ReservationService reservationService;
     private Reservation reservation;
        
-      public ReservationController() {
+  /*    public ReservationController() {
           reservation = new Reservation();
     }
     
@@ -29,7 +30,7 @@ public class ReservationController extends AbstractMethodError{
     }
 
     //@Override
-    /*protected ModelAndView add(
+    protected ModelAndView add(
             HttpServletRequest request,
             HttpServletResponse response) throws Exception {
                 ModelAndView mv = new ModelAndView();
@@ -40,8 +41,10 @@ public class ReservationController extends AbstractMethodError{
                 //mv.addObject("pass", reservationService.create(reservation.getAll()));
                 return mv;
     }*/
-    protected ModelAndView add(){
-    mv = new ModelAndView("reservationView","reservation",reservation);
-    }
+    public ModelAndView add(HttpServletRequest request,
+		HttpServletResponse response) throws Exception {
+ 
+		return new ModelAndView("reservation", "msg","add() method");
+	}
     
 }
