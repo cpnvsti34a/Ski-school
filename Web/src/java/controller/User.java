@@ -9,6 +9,8 @@ package controller;
  * @author Lionel.MARMIER
  */
 public class User {
+<<<<<<< HEAD
+=======
     protected String userName, password, name, lastName, address, city, country;
     protected int zip;
 
@@ -79,5 +81,6 @@ public class User {
     public String getAll(){
         return "user[username]="+userName+"&user[password]="+password+"&user[name]="+name+"&user[lastName]="+lastName+"&user[adress]="+address+"&user[zip]"+zip+"&user[city]="+city+"&user[country]="+country;
     }
+>>>>>>> 5693524e46cac565afeeeac23a7e10946a7856fa
     
 }

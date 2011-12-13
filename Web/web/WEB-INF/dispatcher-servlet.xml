@@ -15,13 +15,9 @@
     for the index controller we are using ParameterizableViewController, so we must
     define an explicit mapping for it.
     -->
-    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="mappings">
-            <props>
-                <prop key="index.htm">indexController</prop>
-            </props>
-        </property>
-    </bean>
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+ 
+    <bean class="controller.PrebookController" />
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -38,8 +34,6 @@
         <bean class="controller.UserController" p:userService-ref="userService" />
         <bean class="controller.CreateUserController" p:userService-ref="userService" />
         <bean class="controller.ReservationController" p:reservationService-ref="reservationService" />
-        <bean class="controller.HelloController" p:helloService-ref="helloService" />
-        
-        
+        <bean class="controller.HelloController" p:helloService-ref="helloService" />      
     
 </beans>
