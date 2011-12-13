@@ -80,4 +80,5 @@ public class User {
     public String getAll(){
         return "user[username]="+userName+"&user[password]="+password+"&user[name]="+name+"&user[lastName]="+lastName+"&user[adress]="+address+"&user[zip]"+zip+"&user[city]="+city+"&user[country]="+country;
     }
+
 }
