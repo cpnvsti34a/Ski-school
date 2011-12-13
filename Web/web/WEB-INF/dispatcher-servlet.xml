@@ -18,6 +18,7 @@
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
  
     <bean class="controller.PrebookController" />
+    <bean class="controller.ReservationController"/>
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -33,7 +34,6 @@
         
         <bean class="controller.UserController" p:userService-ref="userService" />
         <bean class="controller.CreateUserController" p:userService-ref="userService" />
-        <bean class="controller.ReservationController" p:reservationService-ref="reservationService" />
         <bean class="controller.HelloController" p:helloService-ref="helloService" />      
     
 </beans>
