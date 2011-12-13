@@ -38,7 +38,6 @@
         <bean class="controller.UserController" p:userService-ref="userService" />
         <bean class="controller.CreateUserController" p:userService-ref="userService" />
         <bean class="controller.HelloController" p:helloService-ref="helloService" />
-        
-        
+        <bean class="controller.PreOrderController" p:preOrderService-ref="preOrderService"/>
     
 </beans>
