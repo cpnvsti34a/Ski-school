@@ -37,6 +37,7 @@
         
         <bean class="controller.UserController" p:userService-ref="userService" />
         <bean class="controller.CreateUserController" p:userService-ref="userService" />
+        <bean class="controller.ReservationController" p:reservationService-ref="reservationService" />
         <bean class="controller.HelloController" p:helloService-ref="helloService" />
         
         
