@@ -17,10 +17,20 @@ import service.UserService;
 public class UserController extends AbstractController {
     
     private UserService userService;
-    private String users;
-    
+    private User user;
+
+    private String[] tab = new String[2];
+        
       public UserController() {
-          
+          user = new User();
+          user.setName("Lionel");
+          user.setAddress("Chemin du clos aux oies 4");
+          user.setCity("Orzens");
+          user.setCountry("Switzerland");
+          user.setLastName("Marmier");
+          user.setPassword("1234");
+          user.setUserName("Lion.mar");
+          user.setZip(1413);
     }
     
 
@@ -34,7 +44,12 @@ public class UserController extends AbstractController {
             HttpServletResponse response) throws Exception {
                 ModelAndView mv = new ModelAndView("userView");
                 //mv.addObject("pass", userService.retour("http://localhost:3000/users/1.xml"));
+<<<<<<< HEAD
                 mv.addObject("pass", userService.create("data"));
+=======
+                //mv.addObject("pass", userService.create("id="+tab[0]));
+                mv.addObject("pass", userService.create(user.getAll()));
+>>>>>>> 5693524e46cac565afeeeac23a7e10946a7856fa
                 return mv;
     }
     

@@ -89,4 +89,13 @@ class UsersController < ApplicationController
       format.xml { head :ok }
     end
   end
+  
+  #Test methode
+  def test
+	#@test = params[:user]
+	@user = User.new(params[:user])
+	respond_to do |format|
+		format.json {render json: @user}
+	end
+  end
 end

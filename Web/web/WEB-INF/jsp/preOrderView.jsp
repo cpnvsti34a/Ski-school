@@ -1,7 +1,7 @@
 <%-- 
-    Document   : nameView
-    Created on : 29 nov. 2011, 14:31:16
-    Author     : Lionel.MARMIER
+    Document   : preOrderView
+    Created on : 12 déc. 2011, 16:06:36
+    Author     : johanna.vaney
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,10 +10,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>From</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        Voici l'utilisateur que vous venez de créer : <br /><br />
-        ${pass} <br/>
+        <h1>Hello World!</h1>
     </body>
 </html>
