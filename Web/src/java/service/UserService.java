@@ -8,8 +8,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 
 /**
  *
@@ -27,12 +30,40 @@ public class UserService {
         URL url = new URL(urlPassed);
         InputStream response = url.openStream();
         BufferedReader reader = new BufferedReader(new InputStreamReader(response));
-        phrase = "<nobalise>";
+        phrase = "";
         for (String line; (line = reader.readLine()) != null;) {
             phrase += line;
         }
-        phrase += "</nobalise>";
         reader.close();
+        System.out.print(phrase.toString());
         return "Voici la chaine envoyée : " + phrase.toString();
+    }
+    
+    public String create(String data){
+        String ln = "";
+        
+        try{   
+            //Construct data
+            String donnee = URLEncoder.encode("key1", "UTF-8") + "=" + URLEncoder.encode(data, "UTF-8"); 
+            
+            //Send data
+            URL url = new URL("http://localhost:3000/users/test.xml");
+            URLConnection conn = url.openConnection();
+            conn.setDoOutput(true);
+            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+            wr.write(data);
+            wr.flush();
+            System.out.print(donnee);
+            //Get the response
+            BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String line = "";
+            while((line = rd.readLine()) != null){
+                ln += line;
+            }
+            
+        }catch(Exception e){
+            
+        }
+        return ln;
     }
 }
