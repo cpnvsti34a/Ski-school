@@ -41,7 +41,6 @@ public class HelloController extends SimpleFormController {
     }
     // */
     //*
-    @Override
     protected ModelAndView onSubmit(
     HttpServletRequest request, 
     HttpServletResponse response, 
