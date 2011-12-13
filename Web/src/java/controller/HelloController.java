@@ -7,7 +7,7 @@ package controller;
 import java.net.BindException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.SimpleFormController;
 import service.HelloService;
 
@@ -30,12 +30,24 @@ public class HelloController extends SimpleFormController {
     }
     //Use onSubmit instead of doSubmitAction 
     //when you need access to the Request, Response, or BindException objects
+    /*
+    @Override
+    protected ModelAndView onSubmit(Object command) throws Exception {
+        System.out.print("test" + command);
+        Name name = (Name) command;
+        ModelAndView mv = new ModelAndView(getSuccessView());
+        mv.addObject("helloMessage", helloService.sayHello(name.getValue()));
+        return mv;
+    }
+    // */
     //*
+    @Override
     protected ModelAndView onSubmit(
     HttpServletRequest request, 
     HttpServletResponse response, 
     Object command, 
     BindException errors) throws Exception {
+        System.out.print("test" + command);
         Name name = (Name) command;
         ModelAndView mv = new ModelAndView(getSuccessView());
         mv.addObject("helloMessage", helloService.sayHello(name.getValue()));

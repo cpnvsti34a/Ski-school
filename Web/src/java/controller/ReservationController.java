@@ -29,7 +29,6 @@ public class ReservationController extends AbstractMethodError {
         this.reservationService = reservationService;
     }
 
-    @Override
     protected ModelAndView handleRequestInternal(
             HttpServletRequest request,
             HttpServletResponse response) throws Exception {

@@ -44,12 +44,8 @@ public class UserController extends AbstractController {
             HttpServletResponse response) throws Exception {
                 ModelAndView mv = new ModelAndView("userView");
                 //mv.addObject("pass", userService.retour("http://localhost:3000/users/1.xml"));
-<<<<<<< HEAD
-                mv.addObject("pass", userService.create("data"));
-=======
                 //mv.addObject("pass", userService.create("id="+tab[0]));
                 mv.addObject("pass", userService.create(user.getAll()));
->>>>>>> 5693524e46cac565afeeeac23a7e10946a7856fa
                 return mv;
     }
     
