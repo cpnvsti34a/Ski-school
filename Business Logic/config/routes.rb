@@ -1,6 +1,10 @@
 BusinessLogic::Application.routes.draw do
   resources :reservations
 
+  resources :moniteurs
+
+  resources :reservations
+
   resources :users do
 	collection do
 		post 'test'

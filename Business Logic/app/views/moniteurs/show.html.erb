@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @moniteur.name %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @moniteur.lastname %>
+</p>
+
+
+<%= link_to 'Edit', edit_moniteur_path(@moniteur) %> |
+<%= link_to 'Back', moniteurs_path %>
