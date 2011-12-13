@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.net.URLEncoder;
+
 
 /**
  *
@@ -44,6 +44,7 @@ public class UserService {
         
         try{   
             //Construct data
+
             //String donnee = URLEncoder.encode("id", "UTF-8") + "=" + URLEncoder.encode(data, "UTF-8"); 
             
             //Send data
@@ -53,6 +54,7 @@ public class UserService {
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
             wr.write(data);
             wr.flush();
+
             System.out.print(data);
             //Get the response
             BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));

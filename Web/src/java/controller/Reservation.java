@@ -10,9 +10,8 @@ package controller;
  */
 public class Reservation {
     
-    
     public String getAll(){
-    return "";
+    return "test";
     }
     
 }

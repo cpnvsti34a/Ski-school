@@ -24,5 +24,16 @@
           p:prefix="/WEB-INF/jsp/"
           p:suffix=".jsp" />
     
+    <!--
+    The index controller.
+    -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+        
+        <bean class="controller.UserController" p:userService-ref="userService" />
+        <bean class="controller.CreateUserController" p:userService-ref="userService" />
+        <bean class="controller.ReservationController" p:reservationService-ref="reservationService" />
+        <bean class="controller.HelloController" p:helloService-ref="helloService" />      
     
 </beans>

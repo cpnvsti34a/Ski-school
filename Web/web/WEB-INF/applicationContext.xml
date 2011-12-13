@@ -11,8 +11,12 @@
 	<bean name="helloService" class="service.HelloService" />
         
         <bean name="userService" class="service.UserService" />
+
+        <bean name="reservationService" class="service.ReservationService" />
+
         
         <bean name="preOrderService" class="service.PreOrderService" />
+
 	
     <!--bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
