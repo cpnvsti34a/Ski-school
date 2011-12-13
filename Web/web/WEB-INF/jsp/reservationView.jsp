@@ -13,6 +13,6 @@
     </head>
     <body>
         Voici la réservation que vous venez de créer : <br /><br />
-        ${pass} <br/>
+        ${msg} <br/>
     </body>
 </html>
